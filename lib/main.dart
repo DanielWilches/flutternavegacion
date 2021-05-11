@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:rickandmortin/src/login/Login.dart';
+import 'package:rickandmortin/login/Login.dart';
 
 void main() {
   runApp(MaterialApp(
