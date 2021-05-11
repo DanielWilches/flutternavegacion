@@ -1,6 +1,5 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:rickandmortin/pages/Login.dart';
+import 'package:rickandmortin/Login.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,10 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'rick amd morty',
       home: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50.0),
+          preferredSize: Size.fromHeight(70.0),
           child: AppBar(
             title: Text(
-              'home',
+              'rick and morty',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 25,
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
             ),
             actions: <Widget>[
               IconButton(
-                  icon: Icon(Icons.account_box),
+                  icon: Icon(Icons.account_box, size: 35),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Login()));
@@ -47,7 +46,15 @@ class MyApp extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    child: Text('Bienbenido al home'),
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu gravida urna. Aliquam erat volutpat. Vestibulum id neque tincidunt, aliquet felis vel, euismod ipsum. Nam eget sem finibus, efficitur ex quis, aliquet lectus. Donec nisl ipsum, vehicula non porta at, tempus semper arcu. Nam posuere pulvinar mi a consectetur. Praesent euismod commodo nulla. Quisque tellus lectus, porta non tempor ac, semper in leo. Vivamus luctus turpis vel risus consequat semper a et tellus.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.normal),
+                    ),
                   )
                 ],
               ),
@@ -58,9 +65,4 @@ class MyApp extends StatelessWidget {
     ));
     return home;
   }
-
-/*   _ir() {
-    print('ir');
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
-  } */
 }
