@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rickandmortin/Cambioinfo.dart';
 import 'package:rickandmortin/descripcion.dart';
 
 class Home extends StatelessWidget {
@@ -10,11 +11,11 @@ class Home extends StatelessWidget {
         title: 'Login',
         home: Scaffold(
           appBar: _appBar(context),
-          body: SizedBox(
-            width: double.infinity,
+          body: SizedBox.expand(
             child: _bodyhome(context),
           ),
           drawer: drawer(context),
+          floatingActionButton: _flatbtn(context),
 
           /* body: SizedBox(width: double.infinity, child: _appfrom(context)), */
         )));
@@ -104,7 +105,7 @@ class Home extends StatelessWidget {
               margin: const EdgeInsets.all(10),
               padding: const EdgeInsets.all(20),
               child: Text(
-                'Summer',
+                'Abuelo rick',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 30,
@@ -143,5 +144,19 @@ class Home extends StatelessWidget {
       ],
     ));
     return bodyhome;
+  }
+
+  Widget _flatbtn(BuildContext context) {
+    final float = (FloatingActionButton(
+      elevation: 0,
+      highlightElevation: 0,
+      onPressed: () {
+        print('activar float');
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Cambioinfo()));
+      },
+      child: Icon(Icons.add),
+    ));
+    return float;
   }
 }
